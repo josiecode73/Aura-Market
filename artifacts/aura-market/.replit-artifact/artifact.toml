@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Aura Market"
+version = "1.0.0"
+id = "artifacts/aura-market"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 19488
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/aura-market run dev"
+
+[services.env]
+PORT = "19488"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/aura-market", "run", "build"]
+publicDir = "artifacts/aura-market/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

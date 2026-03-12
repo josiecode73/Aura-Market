@@ -1,0 +1,16 @@
+packages:
+  "zustand": "State management for the shopping cart"
+  "framer-motion": "Smooth page transitions and micro-interactions for a premium feel"
+  "@hookform/resolvers": "Zod validation for react-hook-form in admin and checkout"
+
+images:
+  - path: "artifacts/aura-market/public/images/hero-bg.png"
+    description: "Minimalist Japanese aesthetic interior with soft natural lighting, muted blue-grey tones, and elegant empty space"
+    aspect_ratio: "16:9"
+  - path: "artifacts/aura-market/public/images/brand-story.png"
+    description: "Abstract, soft focus still life of textured fabrics and ceramics in minimal blue and grey tones"
+    aspect_ratio: "4:3"
+
+notes:
+  - Hooks from @workspace/api-client-react are generated using Orval and expect `{ data: Body }` for mutations.
+  - The cart state is persisted to localStorage using Zustand.
